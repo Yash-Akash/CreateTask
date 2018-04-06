@@ -1,7 +1,9 @@
-import tkinter
+
 
 #Main
 potionCount = 0
+
+
 
 def buyItems (resources):
     if resources != 0:
@@ -14,7 +16,7 @@ def buyItems (resources):
             else:
                 print("Okay exiting shop...")
         elif itemChoice == "Heal":
-
+            buyConfirmation - input("Ok that will cost 30 resources to buy. Are you sure?")
 
 
 
