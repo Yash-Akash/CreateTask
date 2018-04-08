@@ -1,0 +1,26 @@
+from tkinter import *
+frame = Tk()
+frame.geometry("750x500")
+frame.title("Name of the game go here")
+
+def fight():    
+    frame = Tk()
+    frame.geometry("300x300")
+    frame.title("Fight!")
+
+#buttons
+
+b1 = Button(text="Shop", width= 30, height= 7,)
+b1.place(x= 40, y= 300)
+b2 = Button(text="Fight!", width= 30, height= 7, command=fight)
+b2.place(x= 265, y= 300)
+b3 = Button(text="Harvest", width= 30, height= 7,)
+b3.place(x= 490, y= 300)
+b4 = Button(text="Quit", width= 10, height= 1, command=quit)
+b4.place(x= 665, y= 470)
+
+
+l1 = Label(text="Insert future sample text here")
+l1.place(x=130, y=30)
+
+frame.mainloop()
