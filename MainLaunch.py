@@ -2,7 +2,7 @@ import tkinter as tk
 from shop import *
 from fight import *
 from harvest import *
-
+from Stats import *
 
 def mainLaunch():
 
@@ -17,6 +17,8 @@ def mainLaunch():
     mainpanel = tk.Label(frame, image=bgImage)
     mainpanel.pack(side='top', fill='both', expand='yes')
     mainpanel.image = bgImage
+    healthbar = 20
+    totalhealth = 20
 
     # buttons
     b1 = Button(frame, text="Shop", bg="steel blue",font=('arial', 8, "bold"), width=30, height=7, command=shop)
@@ -27,6 +29,8 @@ def mainLaunch():
     b3.place(x=490, y=300)
     b4 = Button(frame, text="Quit", bg="snow",font=('arial', 8, "bold"), width=10, height=1, command=quit)
     b4.place(x=665, y=470)
-
+    currenthealth, totalhealth = health(healthbar,totalhealth)
+    healthbar = Label(frame, text="HP" + str(currenthealth) + "/" + str(totalhealth))
+    healthbar.place(x = 700, y = 10 )
 
     frame.mainloop()
